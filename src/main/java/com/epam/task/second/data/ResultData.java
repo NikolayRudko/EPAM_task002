@@ -1,10 +1,12 @@
 package com.epam.task.second.data;
 
+import java.util.List;
+
 public class ResultData {
     private String type;
-    private int[] randomGeneratedArray;
+    private List<Integer> randomGeneratedArray;
 
-    public ResultData(String type, int[] randomGeneratedArray) {
+    public ResultData(String type, List<Integer> randomGeneratedArray) {
         this.type = type;
         this.randomGeneratedArray = randomGeneratedArray;
     }
@@ -17,11 +19,11 @@ public class ResultData {
         this.type = type;
     }
 
-    public int[] getRandomGeneratedArray() {
+    public List<Integer> getRandomGeneratedArray() {
         return randomGeneratedArray;
     }
 
-    public void setRandomGeneratedArray(int[] randomGeneratedArray) {
+    public void setRandomGeneratedArray(List<Integer> randomGeneratedArray) {
         this.randomGeneratedArray = randomGeneratedArray;
     }
 }

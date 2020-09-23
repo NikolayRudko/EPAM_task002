@@ -2,6 +2,8 @@ package com.epam.task.second.view;
 
 import com.epam.task.second.data.ResultData;
 
+import java.util.List;
+
 public class ConsoleResultPrinter implements ResultPrinter {
     public void print(ResultData data) {
         switch (data.getType()) {
@@ -16,15 +18,18 @@ public class ConsoleResultPrinter implements ResultPrinter {
         }
     }
 
-    private void printInNewLine(int[] array) {
-        for (int item : array) {
+    private void printInNewLine(List<Integer> list) {
+        for (int item : list) {
             System.out.println(item);
         }
     }
 
-    private void printInLine(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(i != array.length - 1 ? array[i] + " " : array[i]);
+    private void printInLine(List<Integer> list) {
+        for (int i = 0; i < list.size(); i++) {
+            if (i != list.size() - 1) {
+                System.out.print(list.get(i) + " ");
+            }
+            System.out.print(list.get(i));
         }
     }
 }

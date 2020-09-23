@@ -26,4 +26,29 @@ public class CustomData {
         this.size = size;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+
+        CustomData that = (CustomData) obj;
+
+        if (size != that.size) {
+            return false;
+        }
+
+        return type != null ? type.equals(that.type) : that.type == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = type != null ? type.hashCode() : 0;
+        result = 31 * result + size;
+        return result;
+    }
 }
