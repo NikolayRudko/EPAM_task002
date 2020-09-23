@@ -4,7 +4,7 @@ import com.epam.task.second.data.CustomData;
 import com.epam.task.second.data.ResultData;
 
 public class RandomArrayGenerator {
-    public ResultData generator(CustomData data) {
+    public ResultData generateRandomArray(CustomData data) {
         int[] randomArray = new int[data.getSize()];
         final int MIN = 0;
         final int MAX = 10;

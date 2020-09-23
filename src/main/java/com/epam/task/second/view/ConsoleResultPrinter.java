@@ -1,6 +1,5 @@
 package com.epam.task.second.view;
 
-import com.epam.task.second.data.CustomData;
 import com.epam.task.second.data.ResultData;
 
 public class ConsoleResultPrinter implements ResultPrinter {

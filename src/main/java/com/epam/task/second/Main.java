@@ -6,12 +6,12 @@ import com.epam.task.second.exception.MyException;
 import com.epam.task.second.logic.RandomArrayGenerator;
 import com.epam.task.second.parse.ArgumentParser;
 import com.epam.task.second.parse.ArgumentParserFactory;
-import com.epam.task.second.view.ConsoleResultPrinter;
 import com.epam.task.second.view.ResultPrinter;
 import com.epam.task.second.view.ResultPrinterFactory;
 
 public class Main {
     public static void main(String[] args) throws MyException {
+
         //input
         ArgumentParserFactory argumentParserFactory = new ArgumentParserFactory();
         ArgumentParser argumentParser = argumentParserFactory.createArgumentParser();
@@ -19,12 +19,11 @@ public class Main {
 
         //logic
         RandomArrayGenerator randomArrayGenerator = new RandomArrayGenerator();
-        ResultData data = randomArrayGenerator.generator(customData);
+        ResultData resultData = randomArrayGenerator.generateRandomArray(customData);
 
         //output
         ResultPrinterFactory factory = new ResultPrinterFactory();
         ResultPrinter printer = factory.createResultPrinter();
-        printer.print(data);
-
+        printer.print(resultData);
     }
 }

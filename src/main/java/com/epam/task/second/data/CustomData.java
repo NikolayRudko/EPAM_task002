@@ -3,7 +3,7 @@ package com.epam.task.second.data;
 public class CustomData {
     private String type;
     private int size;
-    private int[] randomGeneratedArray;
+
 
     public CustomData(String type, int size) {
         this.type = type;
@@ -24,14 +24,6 @@ public class CustomData {
 
     public void setSize(int size) {
         this.size = size;
-    }
-
-    public int[] getRandomGeneratedArray() {
-        return randomGeneratedArray;
-    }
-
-    public void setRandomGeneratedArray(int[] randomGeneratedArray) {
-        this.randomGeneratedArray = randomGeneratedArray;
     }
 
 }
