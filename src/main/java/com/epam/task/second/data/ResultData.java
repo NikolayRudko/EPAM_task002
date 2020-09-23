@@ -1,13 +1,12 @@
-package com.epam.task.second.entity;
+package com.epam.task.second.data;
 
-public class CustomData {
+public class ResultData {
     private String type;
-    private int size;
     private int[] randomGeneratedArray;
 
-    public CustomData(String type, int size) {
+    public ResultData(String type, int[] randomGeneratedArray) {
         this.type = type;
-        this.size = size;
+        this.randomGeneratedArray = randomGeneratedArray;
     }
 
     public String getType() {
@@ -18,14 +17,6 @@ public class CustomData {
         this.type = type;
     }
 
-    public int getSize() {
-        return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
-
     public int[] getRandomGeneratedArray() {
         return randomGeneratedArray;
     }
@@ -33,5 +24,4 @@ public class CustomData {
     public void setRandomGeneratedArray(int[] randomGeneratedArray) {
         this.randomGeneratedArray = randomGeneratedArray;
     }
-
 }

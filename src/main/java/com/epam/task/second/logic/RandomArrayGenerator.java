@@ -1,9 +1,10 @@
 package com.epam.task.second.logic;
 
-import com.epam.task.second.entity.CustomData;
+import com.epam.task.second.data.CustomData;
+import com.epam.task.second.data.ResultData;
 
 public class RandomArrayGenerator {
-    public void generator(CustomData data) {
+    public ResultData generator(CustomData data) {
         int[] randomArray = new int[data.getSize()];
         final int MIN = 0;
         final int MAX = 10;
@@ -12,6 +13,6 @@ public class RandomArrayGenerator {
             randomArray[i] = MIN + (int) (Math.random() * MAX);
         }
 
-        data.setRandomGeneratedArray(randomArray);
+        return new ResultData(data.getType(),randomArray);
     }
 }

@@ -1,9 +1,10 @@
 package com.epam.task.second.view;
 
-import com.epam.task.second.entity.CustomData;
+import com.epam.task.second.data.CustomData;
+import com.epam.task.second.data.ResultData;
 
-public class ConsolePrinter {
-    public void print(CustomData data) {
+public class ConsoleResultPrinter implements ResultPrinter {
+    public void print(ResultData data) {
         switch (data.getType()) {
             case "New":
                 printInNewLine(data.getRandomGeneratedArray());
